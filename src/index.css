@@ -1,13 +1,250 @@
+/* General Styles */
 body {
+  font-family: Arial, sans-serif;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  background-color: #f4f4f4; /* Light background for the entire page */
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Navigation Styles */
+nav {
+  background-color: #343a40; /* Dark background for the navbar */
+  padding: 10px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #ffffff; /* White text for links */
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 10px 20px;
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+nav ul li a:hover {
+  background-color: #495057; /* Slightly lighter dark background on hover */
+  color: #f8f9fa; /* Light text on hover */
+}
+
+/* Container Styles */
+.container {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+
+/* All Courses Page Styles */
+.all-courses {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.all-courses h1 {
+  font-size: 2rem;
+  color: #343a40; /* Dark text color */
+  margin-bottom: 20px;
+}
+
+.course-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* Space between items */
+}
+
+.course-item {
+  background-color: #ffffff; /* White background for items */
+  border: 1px solid #ddd; /* Light border */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: box-shadow 0.3s; /* Smooth shadow transition */
+  text-align: center;
+  width: 300px; /* Fixed width for items */
+  padding: 10px;
+}
+
+.course-item:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.course-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px; /* Rounded corners for images */
+  margin-bottom: 10px;
+}
+
+.course-item a {
+  text-decoration: none;
+  color: #007bff; /* Primary color for links */
+  font-size: 1.125rem;
+  font-weight: bold;
+  display: block;
+  padding: 10px;
+  transition: color 0.3s;
+}
+
+.course-item a:hover {
+  color: #0056b3; /* Darker color on hover */
+}
+
+/* Individual Course Page Styles */
+.course-content {
+  text-align: center;
+  padding: 20px;
+  background-color: #ffffff; /* White background for course content */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.course-content h1 {
+  font-size: 2.5rem;
+  color: #343a40; /* Dark text color */
+  margin-bottom: 20px;
+}
+
+.course-content img {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  border-radius: 10px; /* Rounded corners for images */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  margin-bottom: 20px;
+}
+
+.course-content p {
+  font-size: 1.125rem;
+  color: #6c757d; /* Light gray text color */
+  line-height: 1.6;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+/* Specific Course Styles */
+.fullstack {
+  background-color: #e9ecef; /* Light gray background for full stack */
+}
+
+.datascience {
+  background-color: #f8f9fa; /* Very light gray background for data science */
+}
+
+.cybersecurity {
+  background-color: #e9f7f9; /* Very light blue background for cybersecurity */
+}
+
+.career {
+  background-color: #f9f9f9; /* Light gray background for career */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .course-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
+.menu-icon {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 24px;
+}
+
+.menu-icon a {
+  color: #007bff; /* Primary color for the icon */
+  text-decoration: none;
+}
+
+.menu-icon a:hover {
+  color: #0056b3; /* Darker color on hover */
+}
+
+/* Login and Signup Page Styles */
+.login-container, .signup-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+  padding: 20px;
+}
+
+.login-form, .signup-form {
+  background-color: #ffffff; /* White background for forms */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  padding: 20px;
+  max-width: 400px;
+  width: 100%;
+}
+
+.login-form h2, .signup-form h2 {
+  margin-bottom: 20px;
+  color: #343a40; /* Dark text color */
+  font-size: 1.5rem;
+}
+
+.login-form label, .signup-form label {
+  display: block;
+  margin-bottom: 8px;
+  color: #6c757d; /* Light gray text color */
+}
+
+.login-form input, .signup-form input {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd; /* Light border */
+  border-radius: 5px; /* Rounded corners */
+}
+
+.login-form button, .signup-form button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff; /* Primary color */
+  color: #ffffff; /* White text color */
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.login-form button:hover, .signup-form button:hover {
+  background-color: #0056b3; /* Darker primary color on hover */
+}
+
+.login-form p, .signup-form p {
+  margin-top: 10px;
+}
+
+.login-form a, .signup-form a {
+  color: #007bff; /* Primary color for links */
+  text-decoration: none;
+}
+
+.login-form a:hover, .signup-form a:hover {
+  color: #0056b3; /* Darker color on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .login-container, .signup-container {
+    padding: 10px;
+  }
 }
